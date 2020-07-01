@@ -1,8 +1,9 @@
 
 <div fxLayout="column" fxLayoutGap="32px">
-    <div class="u-border-sm c-list-item c-list-item-shadow" fxLayout="row" fxFlex="100" *ngFor="let item of items" >
+    <div class="u-border-sm c-list-item" fxLayout="row" fxFlex="100" *ngFor="let item of items" >
         <div fxFlex="80">
             <span fxFlex="100">{{item.firstName}}</span>
+            <span fxFlex="100">{{item.lastName}}</span>
             <span fxFlex="100">{{item.number}}</span>
         </div>
         <div fxFlex="20" fxLayoutGap="25px" fxLayoutAlign="space-between">
