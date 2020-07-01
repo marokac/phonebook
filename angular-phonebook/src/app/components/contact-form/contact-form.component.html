@@ -1,0 +1,32 @@
+
+<form [formGroup]="form" fxLayout="row rwap">
+    <app-input fxLayout="column" fxFlex="100" (inputChange)="onInputChange($event)" [data]="{
+        label: 'First Name',
+        controlName: 'firstName',
+        parentFormGroup: form,
+        type:'text',
+        errorMessage : ''
+    }"></app-input>
+    <app-input fxLayout="column" fxFlex="100" (inputChange)="onInputChange($event)" [data]="{
+        label: 'Last Name',
+        controlName: 'lastName',
+        parentFormGroup: form,
+        type:'text',
+        errorMessage : ''
+    }"></app-input>
+    <app-input fxLayout="column" fxFlex="100" (inputChange)="onInputChange($event)" [data]="{
+        label: 'Phone number',
+        controlName: 'number',
+        parentFormGroup: form,
+        type:'text',
+        errorMessage : ''
+    }"></app-input>
+    <div  class="u-margin-top"fxLayout="column" fxLayoutAlign="center center" fxFlex="100">
+        <div>
+            <app-button fxLayout="row" fxFlex="100" (buttonClick)="submitForm()"[data]="{
+                label: 'Save contact',
+                type:'primary'}"></app-button>
+        </div>
+       
+     </div>
+</form>

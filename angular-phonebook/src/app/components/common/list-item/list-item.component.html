@@ -1,0 +1,21 @@
+
+<div fxLayout="column" fxLayoutGap="32px">
+    <div class="u-border-sm c-list-item c-list-item-shadow" fxLayout="row" fxFlex="100" *ngFor="let item of items" >
+        <div fxFlex="80">
+            <span fxFlex="100">{{item.firstName}}</span>
+            <span fxFlex="100">{{item.number}}</span>
+        </div>
+        <div fxFlex="20" fxLayoutGap="25px" fxLayoutAlign="space-between">
+            <div fxFlex="50">
+                <app-button (buttonClick)="update(item)"fxLayout="row" fxFlex="100"[data]="{
+                    label: 'update',
+                    type:'primary'}"></app-button>
+            </div>
+            <div fxFlex="50">
+                <app-button (buttonClick)="delete(item)"fxLayout="row" fxFlex="100"[data]="{
+                    label: 'delete',
+                    type:'danger'}"></app-button>
+            </div>
+        </div>
+    </div>
+</div>

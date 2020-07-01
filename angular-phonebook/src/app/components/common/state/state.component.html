@@ -1,0 +1,12 @@
+<div class="c-state" [class.c-state-success]="data.type==='success'"
+     [class.c-state-warning]="data.type==='warning'"
+     [class.c-state-danger]="data.type==='danger'" 
+     fxLayout="row wrap" fxFlex="100">
+     <div  fxLayout="row" fxLayoutAlign="center center" fxFlex="100">
+        <h4>{{data.message}}</h4>
+     </div>
+     <div  fxLayout="row" fxLayoutAlign="center center" fxFlex="100">
+        <ng-content></ng-content>
+     </div>
+    
+</div>

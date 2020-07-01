@@ -1,0 +1,15 @@
+.btn{
+    width: 100%;
+    padding : 10px;
+    font-size: 17px;
+    display:inline-block;
+    border-radius: 5px;
+    &-primary{
+        color: rgb(9, 88, 9);
+        border: 1px solid rgb(9, 88, 9);
+    }
+    &-danger{
+        color: red;
+        border: 1px solid red;
+    }
+}

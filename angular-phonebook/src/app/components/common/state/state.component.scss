@@ -1,0 +1,15 @@
+.c-state{
+    width:100%;
+    padding: 10px;
+    min-height: 25px;
+    &-danger{
+        border:1px dotted red;
+    }
+    &-success{
+        border: 1px dotted green;
+    }
+
+    &-warning{
+        border: 1px dotted yellow;
+    }
+}

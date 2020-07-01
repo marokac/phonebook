@@ -1,0 +1,17 @@
+.c-input{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid gray;
+    border-radius: 3px;
+
+    &-label{
+        width: 100%;
+        margin:0;  
+    }
+
+    &-err{
+        width: 100%;
+        margin:0;
+        color:red;
+    }
+}

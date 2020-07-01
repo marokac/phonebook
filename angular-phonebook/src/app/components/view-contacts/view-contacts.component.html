@@ -1,0 +1,33 @@
+<div fxLayout="column" fxLayoutGap="32px">
+    <div class="c-header" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-around center">
+        Phone book
+    </div>
+    <div fxLayout="row wrap" fxFlex="100" class="flex-item" fxFlex fxLayoutAlign="start start">
+        <app-button fxFlex="20" *ngIf="!error.isError && contactList.length > 0 "(buttonClick)="addContacts()" [data]='{
+    label: "Create Contact",
+    type:"primary"
+}'></app-button>
+    </div>
+
+    <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-around center">
+        <app-state fxFlex="100" class="u-full-width" *ngIf="error.isError === true"
+            [data]='{type : "danger" ,message: error["error"].message}'>
+            <div fxFlex="50">
+                <app-button (buttonClick)="refreshPage()"[data]='{
+            label: "Refresh",
+            type:"danger"
+        }'></app-button>
+            </div>
+        </app-state>
+        <app-state fxFlex="100" class="u-full-width" *ngIf="!error.isError && contactList.length === 0 "
+            [data]='{type : "success" ,message: "You have no svaed contacts at the moment"}'>
+            <div fxFlex="30">
+                <app-button (buttonClick)="addContacts()" [data]="{
+            label: 'new Contact',
+            type:'primary'}"></app-button>
+            </div>
+        </app-state>
+        <app-list-item (delete$)="deleteItem($event)" (update$)="updateItem($event)" class="u-full-width" fxFlex="100"
+            *ngIf="!error.isError && contactList.length > 0" [items]="contactList"></app-list-item>
+    </div>
+</div>

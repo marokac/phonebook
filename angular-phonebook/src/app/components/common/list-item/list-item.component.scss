@@ -1,0 +1,35 @@
+.c-list{
+&-container{
+    display: flex;
+    width:100%;
+    justify-content: center;
+}
+  &-item{
+      padding: 20px;
+      &-shadow{
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+      }
+  }
+}
+
+.u {
+    &-text{
+        &-sm{
+            font-size: 11px;
+        } 
+        &-md{
+            font-size: 14px;
+        } 
+     }
+
+     &-border{
+        &-none{
+            border:none;
+        }
+        &-sm{
+        border:1px solid rgb(236, 231, 231);
+        }
+     }
+   
+   
+}
